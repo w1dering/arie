@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>arie</title>
-    <script src="js1.js" defer></script>
-    <link src="styles.css" rel="stylesheet"/>
+    <!-- <script src="js1.js" defer></script> -->
+    <script src="player.js" defer></script>
+    <link href="styles.css" rel="stylesheet"/>
 
 </head>
 <body>
-    <img src="map.png" height="100%" width="100%">
+    <div id="game-world"> <!--place everything that's not the player here-->
+        <img src="map.png" style="width: 200%; height: 200%; position: fixed"> <!--background-->
+    </div>
+    <div id="camera">
+        <!--gui stuff-->
+        <svg id="player" width="100" height="100" viewBox="0 0 100 100" style="position: absolute; z-index: 9999">
+            <rect width="100" height="100" x="0" y="0" fill="blue"></rect>
+        </svg>
+    </div>
 </body>
 </html>
